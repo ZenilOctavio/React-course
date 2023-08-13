@@ -1,0 +1,1 @@
+export const MOVIES_BY_NAME_ENDPOINT = 'https://www.omdbapi.com/?apikey=4287ad07&type=movie&s='

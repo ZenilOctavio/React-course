@@ -1,0 +1,84 @@
+.tw-followCard{
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+    font-size: 0.8rem;
+    background-color: #1f1f1f;
+    padding: 1em;
+    transition: all 0.3s ease-out;
+
+    width: 17rem;
+}
+.tw-followCard:hover{
+    background-color: #2e2e2e;
+    transition: all 0.2s ease-out;
+}
+
+.tw-followCard-header{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tw-followCard-header strong{
+    max-width: 15ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tw-followCard-header strong:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.tw-followCard-header div{
+    display: flex;
+    flex-direction: column;
+}
+
+.tw-followCard-header span{
+    opacity: 0.6;
+}
+
+.tw-followCard .avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.tw-followCard button{
+    /* margin-left: 16px; */
+    border: none;
+    outline: none;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.tw-followCard .following{
+    background-color: #0f0f0f;
+    border: 1px solid #1d9bf0;
+    color: white;
+    transition: all 0.2s ease-out;
+}
+
+.tw-followCard .following:hover{
+    transition: all 0.2s ease-out;
+    background-color: #0f0f0f;
+    border: 1px solid white;
+    color: #1d9bf0;
+}
+
+.tw-followCard .notFollowing:hover{
+    transition: all 0.2s ease-out;
+    color:white;
+    background-color: #1d9bf0;
+    border: 1px solid white;
+}

@@ -1,0 +1,134 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul.products{
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(18rem, 1fr)
+  );
+  gap: 1.5rem;
+  list-style: none;
+}
+
+
+li.product > a{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: all ease-in 0.1s;
+  text-decoration: none;
+  color: black;
+  border-radius: 0.3rem;
+
+}
+li.product > a:hover{
+  position: relative;
+  transform: scale(1.05);
+
+}
+
+li.product > a:hover::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.2rem;
+  animation: addToCartHover forwards ease-in 0.3s 0.1s;
+}
+
+@keyframes addToCartHover {
+  to{
+    opacity: 0.5;
+    background-color: #ececec;
+  }
+}
+
+li.product > a > img{
+  width: 100%;
+  aspect-ratio: 1.6;
+  object-fit: cover;
+}
+
+li.product > a > main{
+  /* background-color: purple; */
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;  
+  gap: 0.4rem;
+}
+
+li.product > a > button{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  display: none;
+  width: 2rem;
+}
+
+li.product > a:hover > button{
+  display: block;
+  transition: transform 0.2s ;
+}
+
+li.product > a:hover > button:hover{
+  transform: scale(1.1);
+}
+
+
+li.product > a > main > h4{
+  text-transform: capitalize;
+  color: #149cd9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+li.product > a > main > section{
+  display: flex;
+  flex-grow: 3;
+}
+
+
+li.product > a > main > section > div{
+  /* background-color: blue; */
+  padding-bottom: 0.6rem;
+  padding-right: 0.6rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #59ac52;
+
+}
+li.product > a > main > section > aside > p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: elipsis;
+  
+}
+
+li.product > a > main > section > aside{
+  /* background-color: bisque; */
+  flex-grow: 3;
+  opacity: 0.7;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: elipsis;
+  padding-right: 0.5rem;
+}
+
+
